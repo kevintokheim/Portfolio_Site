@@ -1,0 +1,29 @@
+<?php
+
+function pet_menu()
+{
+    $items = array();
+    $items['pet'] = array(
+      'title' => "My Favorite Pet",
+      'page callback' => 'pet_display',
+      'access callback' => TRUE,
+      'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function pet_display()
+{
+    return '
+        <ul>
+            <li>Chloe</li>
+            <li><img src="/modules/pet/chloe.jpeg"></li>
+                <ul>
+                    <li>Golden Retriever</li>
+                    <li>3 years old</li>
+                    <li>She is really big</li>
+                    <li>She likes chasing small animals around</li>
+                </ul>
+        </ul>
+    ';
+}

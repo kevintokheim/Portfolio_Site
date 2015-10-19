@@ -1,0 +1,20 @@
+<?php
+
+function groceries_menu()
+{
+    $items = array();
+    $items['groceries'] = array(
+        'title' => "Welcome to my Grocery List!",
+        'page callback' => 'grocery_list',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function grocery_list()
+{
+    return '
+        
+    ';
+}

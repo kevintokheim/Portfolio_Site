@@ -1,0 +1,6 @@
+name = Favorites
+description = creates three menu items that each display my favorite three things
+              in three different categories
+package = My First Modules
+core = 7.x
+files[] = favorites.module

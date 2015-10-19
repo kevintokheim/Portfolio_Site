@@ -1,0 +1,60 @@
+<?php
+
+function favorites_menu()
+{
+  $items = array();
+  $items['movies'] = array(
+      'title' => "My Favorite Movies",
+      'page callback' => 'favorite_movies',
+      'access callback' => TRUE,
+      'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['books'] = array(
+      'title' => "My Favorite Books",
+      'page callback' => 'favorite_books',
+      'access callback' => TRUE,
+      'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['songs'] = array(
+      'title' => "My Favorite Songs",
+      'page callback' => 'favorite_songs',
+      'access callback' => TRUE,
+      'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function favorite_movies()
+{
+    return '
+        <ul>
+            <li>Fargo</li>
+            <li>The Big Lebowski</li>
+            <li>Taxi Driver</li>
+        </ul>
+    ';
+}
+
+function favorite_books()
+{
+    return '
+        <ul>
+            <li>Infinite Jest by David Foster Wallace</li>
+            <li>2666 by Roberto Bolano</li>
+            <li>Slaughterhouse 5 by Kurt Vonnegut</li>
+        </ul>
+    ';
+}
+
+function favorite_songs()
+{
+    return '
+        <ul>
+            <li>Singapore by Tom Waits</li>
+            <li>So Long Marianne by Leonard Cohen</li>
+            <li>If I Should Fall From Grace With God by The Pogues</li>
+        </ul>
+    ';
+}
